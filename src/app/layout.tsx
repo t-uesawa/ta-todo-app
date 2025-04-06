@@ -1,5 +1,15 @@
 import { ClerkProvider } from "@clerk/nextjs";
 
+export const metadata = {
+  title: "My App",
+  description: "PWA対応のClerkアプリ",
+  manifest: "/manifest.json",
+  themeColor: "#317EFB",
+  icons: {
+    apple: "/icons/icon-192x192.png",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -8,11 +18,6 @@ export default function RootLayout({
   return (
     <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <html lang="ja">
-        <head>
-          <link rel="manifest" href="/manifest.json" />
-          <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
-          <meta name="theme-color" content="#317EFB" />
-        </head>
         <body>
           {children}
         </body>

@@ -2,8 +2,15 @@ import { SignUp } from "@clerk/nextjs";
 
 export default function Page() {
 	return (
-		<SignUp
-			fallbackRedirectUrl='/'
-		/>
+		<div className='flex justify-center items-center h-screen'>
+			<SignUp
+				fallbackRedirectUrl='/'
+				appearance={{
+					elements: {
+						footer: { display: 'none' }
+					}
+				}}
+			/>
+		</div>
 	)
 }
