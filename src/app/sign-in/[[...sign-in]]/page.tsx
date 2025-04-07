@@ -7,11 +7,13 @@ export default function Page() {
 				fallbackRedirectUrl='/'
 				appearance={{
 					elements: {
-						footer: { display: 'none' }
+						footer: { display: 'none' },
+					},
+					layout: {
+						logoImageUrl: '/icons/todo_transparent.png'
 					}
 				}}
 			/>
 		</div>
-
 	)
 }

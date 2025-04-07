@@ -1,12 +1,9 @@
-// import { UserButton } from "@clerk/nextjs";
 import { UserButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
+// import { redirect } from "next/navigation";
 
 export default async function Home() {
   const { userId } = await auth();
-
-  console.log(userId);
-
   if (!userId) {
     return (
       <div>
@@ -18,8 +15,8 @@ export default async function Home() {
 
   return (
     <div>
-      <h1>ようこそ！</h1>
       <UserButton />
     </div>
-  );
+  )
+  // redirect('/list');
 }

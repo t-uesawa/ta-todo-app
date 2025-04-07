@@ -8,6 +8,9 @@ export default function Page() {
 				appearance={{
 					elements: {
 						footer: { display: 'none' }
+					},
+					layout: {
+						logoImageUrl: '/icons/todo_transparent.png'
 					}
 				}}
 			/>

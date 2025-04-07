@@ -1,4 +1,5 @@
 import { ClerkProvider } from "@clerk/nextjs";
+import './globals.css';
 
 export const metadata = {
   title: "My App",
@@ -18,7 +19,7 @@ export default function RootLayout({
   return (
     <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <html lang="ja">
-        <body>
+        <body className="bg-[#F5F6FA]">
           {children}
         </body>
       </html>
