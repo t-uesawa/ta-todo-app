@@ -1,11 +1,11 @@
 {
-  "name": "Todo App",
-  "short_name": "TodoApp",
-  "description": "Todo App",
+  "name": "Todo",
+  "short_name": "Todo",
+  "description": "人間の記憶量って限界があんねん",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#317EFB",
+  "background_color": "#F5F6FA",
+  "theme_color": "#F5F6FA",
   "icons": [
     {
       "src": "/icons/192x192.png",

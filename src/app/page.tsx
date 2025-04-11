@@ -1,5 +1,5 @@
-import { UserButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 // import { redirect } from "next/navigation";
 
 export default async function Home() {
@@ -13,10 +13,5 @@ export default async function Home() {
     );
   }
 
-  return (
-    <div>
-      <UserButton />
-    </div>
-  )
-  // redirect('/list');
+  redirect('/list');
 }
