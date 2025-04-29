@@ -32,7 +32,7 @@ export default async function ListLayout({ children }: { children: ReactNode }) 
 
 			{/* メインコンテンツ */}
 			<main className="flex-1 overflow-y-auto p-6 pt-10 md:pt-0">
-				{React.cloneElement(children as React.ReactElement, { taskLists })}
+				{children}
 			</main>
 		</div>
 	);
