@@ -104,7 +104,7 @@ export default function TaskForm({ listId, userId }: { listId: string; userId: s
 
 			{isRoutine && (
 				<div className="grid grid-cols-2 gap-2">
-					<Select onValueChange={(val) => setValue('intervalType', val as any)}>
+					<Select onValueChange={(val) => setValue('intervalType', val as "day" | "week" | "month" | "year")}>
 						<SelectTrigger>
 							<SelectValue placeholder="周期タイプ" />
 						</SelectTrigger>
