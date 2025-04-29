@@ -27,7 +27,7 @@ const Page = async ({ params }: Props) => {
 	const tasks = [{ id: '1', title: 'task', completed: false }];
 
 	return (
-		<main className="p-6">
+		<main className="p-2 pt-10 md:pt-0">
 			<h1 className="text-2xl font-bold mb-4">{params.id ?? "リスト"}</h1>
 
 			<div className="space-y-3">

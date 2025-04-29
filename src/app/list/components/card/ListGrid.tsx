@@ -1,17 +1,14 @@
 // app/list/components/TaskListGrid.tsx
 
+import { List } from "@/lib/schemas/taskSchema"
 import { ListCard } from "./ListCard"
 
-export type TaskList = {
-	id: string
-	name: string
-}
-
 type Props = {
-	taskLists: TaskList[]
+	taskLists: List[]
 }
 
 export const TaskListGrid = ({ taskLists }: Props) => {
+	if (!taskLists) return <div>aaa</div>
 	return (
 		<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 			{taskLists.map((list) => (

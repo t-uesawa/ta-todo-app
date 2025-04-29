@@ -1,15 +1,16 @@
+import { List } from "@/lib/schemas/taskSchema";
 import { TaskListGrid } from "./components/card/ListGrid";
 
-type TaskList = {
-	id: string;
-	name: string;
+type Props = {
+	taskLists: List[];
 };
 
-export default async function Page() {
+export default async function Page({ taskLists }: Props) {
+	console.log(taskLists);
 	return (
 		<main className="p-6">
 			<h1 className="text-2xl font-bold mb-4">タスクリスト</h1>
-			<TaskListGrid taskLists={[{ id: 'aaa', name: 'aaa' }] as TaskList[]} />
+			<TaskListGrid taskLists={taskLists} />
 		</main>
 	);
 }

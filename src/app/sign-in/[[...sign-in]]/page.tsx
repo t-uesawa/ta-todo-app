@@ -6,7 +6,6 @@ export default function Page() {
 			<SignedOut>
 				<SignIn
 					fallbackRedirectUrl='/'
-					afterSignInUrl='/'
 					appearance={{
 						elements: {
 							footer: { display: 'none' },

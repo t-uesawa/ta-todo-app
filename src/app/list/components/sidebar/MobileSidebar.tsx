@@ -6,9 +6,10 @@ import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import Link from "next/link"
+import { List } from "@/lib/schemas/taskSchema"
 
 type Props = {
-	taskLists: { id: string; name: string }[]
+	taskLists: List[]
 }
 
 export const MobileSidebar = ({ taskLists }: Props) => {

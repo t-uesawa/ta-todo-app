@@ -4,14 +4,25 @@
  */
 
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
+import { NextResponse } from 'next/server';
 
 // 認証不要のルーティング
 const isPublicRoute = createRouteMatcher(['/sign-in(.*)', '/sign-up(.*)']);
 
 export default clerkMiddleware(async (auth, req) => {
-	if (!isPublicRoute(req)) {
-		await auth.protect();
+	const user = (await auth()).userId;
+	console.log(user);
+
+	// 認証不要のルーティングは認証をスキップ
+	if (isPublicRoute(req)) {
+		if (user) {
+			return NextResponse.redirect(new URL('/list', req.url));
+		}
+		return;
 	}
+
+	// 認証が必要なルーティングは認証を要求
+	await auth.protect();
 });
 
 export const config = {

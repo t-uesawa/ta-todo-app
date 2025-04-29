@@ -4,6 +4,8 @@ import { redirect } from "next/navigation";
 
 export default async function Home() {
   const { userId } = await auth();
+
+  console.log(userId);
   if (!userId) {
     return (
       <div>
